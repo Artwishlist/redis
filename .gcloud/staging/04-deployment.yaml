@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: redis
+  namespace: staging
+spec:
+  replicas: 1 # tells deployment to run 1 pod matching the template
+  minReadySeconds: 60
+  template: # create pods using pod definition in this template
+    metadata:
+      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:3.2-alpine
+        ports:
+        - containerPort: 6379
