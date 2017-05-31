@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: redis
-        image: redis:3.2-alpine
+        image: artwishlist/redis-unprotected
         ports:
         - containerPort: 6379
