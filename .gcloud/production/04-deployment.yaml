@@ -4,8 +4,8 @@ metadata:
   name: redis
   namespace: production
 spec:
-  replicas: 2 # tells deployment to run 1 pods matching the template
-  minReadySeconds: 60
+  replicas: 1 # tells deployment to run 1 pods matching the template
+  minReadySeconds: 20
   template: # create pods using pod definition in this template
     metadata:
       # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
