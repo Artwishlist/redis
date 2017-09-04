@@ -1,3 +1,3 @@
 # Redis deployment scripts
 
-Deployment scripts for Redis at Google Cloud
+Deployment scripts for Redis 4 at Google Cloud
